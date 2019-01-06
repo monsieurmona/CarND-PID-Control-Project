@@ -1,0 +1,145 @@
+1. Try
+p, i, d: 1.0, 0.0, 0.0
+Speed: 50
+Throttle: 0.3
+Result: Oscilation escalates at the beginning at straight track
+
+2. Try
+p, i, d: 0.5, 0.0, 0.0
+Speed: 50
+Throttle: 0.3
+Result: Oscilation escalates at the beginning at straight track - 25 mph
+
+3. Try
+p, i, d: 0.25, 0.0, 0.0
+Speed: 50
+Throttle: 0.3
+Result: Oscilation escalates at straight track - 27 mph
+
+4. Try
+p, i, d: 0.12, 0.0, 0.0
+Speed: 50
+Throttle: 0.3
+Result: Oscilation escalates at straight track - 30 mph
+
+5. Try
+p, i, d: 0.06, 0.0, 0.0
+Speed: 50
+Throttle: 0.3
+Result: Oscilation escalates in curve at 32 mph
+
+// increase throttle
+6. Try
+p, i, d: 0.06, 0.0, 0.0
+Speed: 50
+Throttle: 0.5
+Result: Oscilation escalates at straight track - 45 mph
+
+7. Try
+p, i, d: 0.03, 0.0, 0.0
+Speed: 50
+Throttle: 0.5
+Result: Oscilation descreases over time, car drives straight but it is not possible to get around the curve with 50 mph
+
+8. Try
+p, i, d: 0.05, 0.0, 0.0
+Speed: 50
+Throttle: 0.5
+Result: Oscilation slightly starts, car drives straight but it is not possible to get around the curve with 50 mph
+
+// Damping
+
+9. Try
+p, i, d: 0.05, 0.0, 1.0
+Speed: 50
+Throttle: 0.5
+Result: Car gets around the complete track at 50mph
+
+// trying to find the correct i
+10. Try
+p, i, d: 0.05, 0.0, 1.0
+Speed: 50
+Throttle: 0.5
+
+Result
+196. SumCte: 137.546 CTE: 0.6202 Steering Value: -0.02261
+197. SumCte: 138.157 CTE: 0.6114 Steering Value: -0.02177
+198. SumCte: 138.759 CTE: 0.6021 Steering Value: -0.020805
+199. SumCte: 139.351 CTE: 0.5923 Steering Value: -0.019815
+200. SumCte: 139.935 CTE: 0.5831 Steering Value: -0.019955
+
+10. Try
+p, i, d: 0.05, 0.1, 1.0
+Speed: 50
+Throttle: 0.5
+
+Result: Car makes big turns at the very beginning
+
+11. Try
+p, i, d: 0.05, 0.01, 1.0
+Speed: 50
+Throttle: 0.5
+
+Result: Car makes big turns at the very beginning
+
+12. Try
+p, i, d: 0.05, 0.005, 1.0
+Speed: 50
+Throttle: 0.5
+
+Result: Car makes big turns at the very beginning
+
+13. Try
+p, i, d: 0.05, 0.001, 1.0
+Speed: 50
+Throttle: 0.5
+
+result
+
+196. SumCte: 20.3847 CTE: 0.3027 Steering Value: -0.0461197
+197. SumCte: 20.6962 CTE: 0.3115 Steering Value: -0.0450712
+198. SumCte: 21.0149 CTE: 0.3187 Steering Value: -0.0441499
+199. SumCte: 21.3392 CTE: 0.3243 Steering Value: -0.0431542
+200. SumCte: 21.6695 CTE: 0.3303 Steering Value: -0.0441845
+
+car gets around the track
+
+14. Try
+p, i, d: 0.05, 0.0005, 1.0
+Speed: 50
+Throttle: 0.5
+
+195. SumCte: 60.6706 CTE: -0.0059 Steering Value: -0.0306403
+196. SumCte: 60.6645 CTE: -0.0061 Steering Value: -0.0298272
+197. SumCte: 60.6566 CTE: -0.0079 Steering Value: -0.0281333
+198. SumCte: 60.6465 CTE: -0.0101 Steering Value: -0.0276182
+199. SumCte: 60.6334 CTE: -0.0131 Steering Value: -0.0266617
+200. SumCte: 60.6167 CTE: -0.0167 Steering Value: -0.0258733
+
+
+///
+/// Twiddle
+15. Try
+p, i, d:        0.05,  0.001, 1.0
+steps p, i, d: 0.005, 0.0001, 0.1
+Speed: 50
+Throttle: 0.5
+round steps: 1400
+
+BEST Twiddle. tau:2 (p=0, d=1, i=2)
+   tau constants.
+      p:0.166668 i:0.00305867 d:1.82005
+   steps.
+      p step:0.000480087 i step:9.50573e-06 d step:0.00960175
+   error:447.26
+   bestError:412.93
+   reset:
+      p reset:0 i reset:0 d reset:0
+Connected!!!
+Best parameter found for tau:2(p=0, d=1, i=2)
+
+
+
+
+
+

@@ -7,7 +7,10 @@ add_definitions(-std=c++11)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS "${CXX_FLAGS}")
 
-set(sources src/PID.cpp src/main.cpp)
+set(sources 
+    src/PID.cpp 
+    src/main.cpp
+)
 
 include_directories(/usr/local/include)
 link_directories(/usr/local/lib)
@@ -22,5 +25,7 @@ endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 
 add_executable(pid ${sources})
+find_library(WS_LIB uWS HINTS ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-target_link_libraries(pid z ssl uv uWS)
+target_link_libraries(pid z ssl uv "${WS_LIB}")
+target_include_directories(pid PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
