@@ -68,28 +68,28 @@ Result
 199. SumCte: 139.351 CTE: 0.5923 Steering Value: -0.019815
 200. SumCte: 139.935 CTE: 0.5831 Steering Value: -0.019955
 
-10. Try
+11. Try
 p, i, d: 0.05, 0.1, 1.0
 Speed: 50
 Throttle: 0.5
 
 Result: Car makes big turns at the very beginning
 
-11. Try
+12. Try
 p, i, d: 0.05, 0.01, 1.0
 Speed: 50
 Throttle: 0.5
 
 Result: Car makes big turns at the very beginning
 
-12. Try
+13. Try
 p, i, d: 0.05, 0.005, 1.0
 Speed: 50
 Throttle: 0.5
 
 Result: Car makes big turns at the very beginning
 
-13. Try
+14. Try
 p, i, d: 0.05, 0.001, 1.0
 Speed: 50
 Throttle: 0.5
@@ -104,7 +104,7 @@ result
 
 car gets around the track
 
-14. Try
+15. Try
 p, i, d: 0.05, 0.0005, 1.0
 Speed: 50
 Throttle: 0.5
@@ -119,7 +119,7 @@ Throttle: 0.5
 
 ///
 /// Twiddle
-15. Try
+16. Try
 p, i, d:        0.05,  0.001, 1.0
 steps p, i, d: 0.005, 0.0001, 0.1
 Speed: 50
