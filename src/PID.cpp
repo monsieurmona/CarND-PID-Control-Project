@@ -4,6 +4,7 @@
 
 // system includes
 #include <iostream>
+#include <math.h>
 
 // local includes
 #include "PID.hpp"
