@@ -25,7 +25,8 @@ endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 
 add_executable(pid ${sources})
-find_library(WS_LIB uWS HINTS ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+# find_library(WS_LIB uWS HINTS ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-target_link_libraries(pid z ssl uv "${WS_LIB}")
+# target_link_libraries(pid z ssl uv "${WS_LIB}")
+target_link_libraries(pid z ssl uv uWS)
 target_include_directories(pid PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
