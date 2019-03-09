@@ -1,5 +1,8 @@
 PID Controller C++ - Steering Car in Simulation
 ======
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+Mario Lüder
+
 ***Project: CarND-Controls-PID - Udacity Self-Driving Car Engineer Nanodegree Program***
 **Author: Mario Lüder**
 
